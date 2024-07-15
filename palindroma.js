@@ -9,7 +9,7 @@ function isPalindrome (parola) {
     let lunghezzaParola = parola.length
 
     for (let i = 0; i < Math.floor(lunghezzaParola / 2); i++) {
-        if (parola[i] === parola[(lunghezzaParola - 1) - i]) {
+        if (parola[i] !== parola[(lunghezzaParola - 1) - i]) {
             return false
         } 
     }
