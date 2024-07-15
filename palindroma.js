@@ -7,24 +7,21 @@ let parolaMinuscola = parolaUtente.toLowerCase()
 // 3) creiamo la funzione per calcolare se la parola è palimdroma o meno
 function isPalindrome (parola) {
     let lunghezzaParola = parola.length
-    let risultato
 
-    for (let i = 0; i < lunghezzaParola; i++) {
+    for (let i = 0; i < Math.floor(lunghezzaParola / 2); i++) {
         if (parola[i] === parola[(lunghezzaParola - 1) - i]) {
-            risultato = true
-        } else {
-            risultato = false
-        }
+            return false
+        } 
     }
 
-    return risultato
+    return true
 }
 
 // 4) verifichiamo se la parola è Palindroma
-let verifica = isPalindrome(parolaMinuscola)
+let verificata = isPalindrome(parolaMinuscola)
 
-if (verifica) {
-    console.log('La parola ' + parolaUtente + 'è palindroma')
+if (verificata) {
+    console.log('La parola ' + parolaUtente + ' ciaoè palindroma')
 } else {
-    console.log('La parola ' + parolaUtente + 'non è palindroma')
+    console.log('La parola ' + parolaUtente + ' non è palindroma')
 }
