@@ -10,7 +10,7 @@ function isPalindrome (parola) {
     let risultato
 
     for (let i = 0; i < lunghezzaParola; i++) {
-        if (parola[i] === word[(lunghezzaParola - 1) - i]) {
+        if (parola[i] === parola[(lunghezzaParola - 1) - i]) {
             risultato = true
         } else {
             risultato = false
